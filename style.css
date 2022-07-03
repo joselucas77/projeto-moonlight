@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root
+{
+    --fonte00: 'Bebas Neue', cursive;
+    --fonte01: 'Poppins', sans-serif;
+    --fonte02: 'Pacifico', cursive;
+    --fonte03: 'Caveat', cursive;
+    --fonte04: 'Dancing Script', cursive;
+    --fonte05: 'Indie Flower', cursive;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte01);
+    scroll-behavior: smooth;
+}
+
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #1c0522;
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.logo
+{
+    font-family: var(--fonte00);
+    margin-left: 10px;
+    font-size: 60px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-left: 50px;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a
+{
+    font-family: var(--fonte02);
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+
+section.links
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+section.links::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section.links img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section.links img#moon
+{
+    mix-blend-mode: screen;
+}
+
+section.links img#mountains_front
+{
+    z-index: 10;
+}
+
+#text
+{
+    position: absolute;
+    right: -350px;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    transform: translateY(-10px);
+}
+
+#btn
+{
+    font-family: var(--fonte00);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(120px);
+}
+
+h2#title
+{
+    font-family: var(--fonte01);
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    margin-top: 50px;
+}
+
+section.normal, p
+{
+    position: relative;
+    padding: 100px;
+    max-width: 100%;
+    font-family: var(--fonte03);
+    font-size: 2em;
+    color: white;
+    margin-top: -50px;
+}
+
+section.imagem
+{
+    position: relative;
+    padding: 100px;
+    max-width: 100%;
+    font-family: var(--fonte03);
+    font-size: 2em;
+    color: white;
+    margin-top: -50px;
+}
+
+section#img
+{
+    background-image: url(imagens/stars.png);
+    background-attachment: fixed;
+    
+}
+
+.autor
+{
+    font-family: var(--fonte05);
+    font-size: 1em;
+    color: white;
+    margin-top: -180px;
+}
+
+#autor
+{
+    text-decoration: none;
+}

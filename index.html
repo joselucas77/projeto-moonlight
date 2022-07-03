@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="lua.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>talking to the moon</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="https://joselucas77.github.io/HTML-CSS/" target="_blank">About</a></li>
+            <li><a href="https://github.com/joselucas77" target="_blank">Work</a></li>
+            <li><a href="https://www.instagram.com/joselucas3349/" target="_blank">Contact</a></li>
+        </ul>
+    </header>
+    <section class="links">
+        <img src="imagens/stars.png" id="stars">
+        <img src="imagens/moon.png" id="moon">
+        <img src="imagens/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="imagens/mountains_front.png" id="mountains_front">
+    </section>
+    <main id="sec">
+        <h2 id="title">Poemas sobre a lua</h2>
+        <section class="normal">
+            <p>
+                Quando te achei, havia <br>
+                Tanta coisa pra te dar... <br>
+                Havia lua cheia sobre <br>
+                Mar, havia espanto e amor <br>
+                No meu olhar.
+            </p>
+            <p class="autor"><a id="autor" href="https://musicabrasilis.org.br/compositores/adoniran-barbosa" target="_blank">@<i>Adoniran Barbosa</i></a></p>
+        </section>
+        <br>
+        <section class="imagem" id="img">
+            <p>
+                São demais os perigos desta vida <br>
+                Para quem tem paixão, principalmente <br>
+                Quando uma lua surge de repente <br>
+                E se deixa no céu, como esquecida. <br>
+                E se ao luar que atua desvairado <br>
+                Vem se unir uma música qualquer <br>
+                Aí então é preciso ter cuidado <br>
+                Porque deve andar perto uma mulher. <br>
+                Deve andar perto uma mulher que é feita <br>
+                De música, luar e sentimento <br>
+                E que a vida não quer, de tão perfeita. <br>
+                Uma mulher que é como a própria Lua: <br>
+                Tão linda que só espalha sofrimento <br>
+                Tão cheia de pudor que vive nua.
+            </p>
+            <p class="autor"><a 
+               id="autor" href="https://www.viniciusdemoraes.com.br/" target="_blank">@<i>Vinícius de Moraes</i></a></p>
+        </section>
+        <br>
+        <section class="normal">
+            <p>
+                És livre na luz do Sol e <br>
+                livre ante a estrela da <br>
+                noite. E és livre quando <br>
+                não há Sol, nem Lua ou <br>
+                estrelas. Inclusive, és <br>
+                livre quando fechar os <br>
+                olhos a tudo que existe.
+            </p>
+            <p class="autor"><a id="autor" href="https://www.ebiografia.com/khalil_gibran/" target="_blank">@<i>Khalil Gibran</i></a></p>
+        </section>
+        <br>
+        <section class="imagem" id="img">
+            <p>
+                Tenho fases, como a lua, <br>
+                Fases de andar escondida, <br>
+                fases de vir para a rua… <br>
+                Perdição da minha vida! <br>
+                Perdição da vida minha! <br>
+                tenho outras de ser sozinha. <br>
+
+                Fases que vão e que vêm, <br>
+                no secreto calendário <br>
+                que um astrólogo arbitrário <br>
+                inventou para meu uso. <br>
+                E roda a melancolia <br>
+                seu interminável fuso! <br>
+
+                Não me encontro com ninguém <br>
+                (tenho fases, como a lua…). <br>
+                No dia de alguém ser meu <br>
+                não é dia de eu ser sua… <br>
+                E, quando chega esse dia, <br>
+                o outro desapareceu…
+            </p>
+            <p class="autor"><a id="autor" href="https://www.todamateria.com.br/cecilia-meireles/" target="_blank">@<i>Cecília Meireles</i></a></p>
+        </section>
+    </main>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
